@@ -30,17 +30,17 @@ import org.checkerframework.checker.units.qual.K;
 public class Optimization {
 
     protected Random random;
-    public Vector incentiveVector;
     public Vector variableCosts;
     public double localCost=0;
     public double preference=0;
     public double queue=0;
+    public List<Vector> incentiveSignals;
 
 
     public Optimization(Random random) {
         this.random = random;
         variableCosts = new Vector(Configuration.numPlans);
-        incentiveVector = new Vector(Configuration.numPlans);
+        incentiveSignals = new ArrayList<>(Configuration.numIterations);
     }
 
     public <V extends DataType<V>> List<V> calcAllCombinations(List<List<V>> choicesPerAgent) {
@@ -401,8 +401,7 @@ public class Optimization {
                         G.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[0]);
                         L.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[1]);
                     }
-                    incentiveVector.setValue(i, LIS.getValue(i));
-                    variableCosts.setValue(i, L.getValue(i));
+                    variableCosts = L;
                 }
 			} catch(Exception e) {
 				e.printStackTrace();
@@ -417,7 +416,7 @@ public class Optimization {
             else {complexCost = complexCost.min_max_normalization.apply(complexCost);}
 
             agent.variableCostLogger.setVariableCost(agent.getPeer().getIndexNumber(), agent.iteration, variableCosts);
-			agent.incentiveSignalLogger.setOverallIncentiveSignal(agent.getPeer().getIndexNumber(), agent.iteration, incentiveVector);
+            agent.incentiveSignalLogger.setOverallIncentiveSignal(agent.getPeer().getIndexNumber(), agent.iteration, LIS);
 
 			agent.setComplexCosts(complexCost,agent.iteration,complexCost.find(complexCost.min()));
 			return complexCost.find(complexCost.min());

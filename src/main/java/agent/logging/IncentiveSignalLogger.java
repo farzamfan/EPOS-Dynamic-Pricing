@@ -25,7 +25,7 @@ import protopeer.measurement.MeasurementLog;
 public class IncentiveSignalLogger {
 
     private String filepath;
-    List<List<Vector>> overallIncentiveSignal;
+    private List<List<Vector>> overallIncentiveSignal;
 
     public IncentiveSignalLogger(String path){
         filepath = path;
@@ -41,7 +41,7 @@ public class IncentiveSignalLogger {
     }
 
     public void print() {
-        
+
         if (this.filepath == null) {
             System.out.println("no filepath");
         } else {

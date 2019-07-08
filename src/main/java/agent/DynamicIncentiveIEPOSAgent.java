@@ -67,7 +67,6 @@ import func.PlanCostFunction;
     List<Vector>                                        complexCosts;
     int[]                                               complexCostSelceted;
     
-    
     private boolean										convergenceReached				=	false;
 
     /**

@@ -4,418 +4,14 @@
     <list default="true" id="80a91c88-994b-4c17-9c87-1ec04495fcab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/epos.properties" beforeDir="false" afterPath="$PROJECT_DIR$/conf/epos.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_0.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_0.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_1.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_1.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_10.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_10.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_2.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_2.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_3.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_3.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_4.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_4.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_5.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_5.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_6.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_6.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_7.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_7.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_8.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_8.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/agent_9.plans" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/agent_9.plans" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/linear increase.target" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/gaussian/linear increase.target" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/gaussian/zero.target" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/mensa/signal.target" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/mensa/signal.target" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.4-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.5-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/mensa_0.0-0.6-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/LocalCost0000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/globalComplexCost0000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/globalCost0000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/index0000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.0-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.1-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.2-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.3-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.4-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.5-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.6-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.7-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.8-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.9-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.91-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.95-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-0.99-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/incentiveSignal.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/variableCost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/minMax normalisation - noGC/mensa_0.0-1.0-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/GlobalComplexCost0000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/GlobalCost0000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/LocalCost0000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.0-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.1-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.2-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.3-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.4-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.5-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.6-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.7-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.8-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-0.9-0.0/weights-alpha-beta.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/global-complex-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/global-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/global-response.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/indexes-histogram.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/local-cost.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/num-reorganizations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/selected-plans-graph-run-0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/selected-plans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/termination.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/unfairness.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/used_conf.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/no normalisation/mensa_0.0-1.0-0.0/weights-alpha-beta.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agent/DynamicIncentiveIEPOSAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agent/DynamicIncentiveIEPOSAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agent/Optimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agent/Optimization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agent/logging/IncentiveSignalLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agent/logging/IncentiveSignalLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agent/logging/VariableCostLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agent/logging/VariableCostLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agent/planselection/PlanSelectionOptimizationFunctionCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agent/planselection/PlanSelectionOptimizationFunctionCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/experiment/IEPOSExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/experiment/IEPOSExperiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/func/IndexCostFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/func/IndexCostFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/agent/DynamicIncentiveIEPOSAgent$DownMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agent/DynamicIncentiveIEPOSAgent$DownMessage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/agent/DynamicIncentiveIEPOSAgent$UpMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agent/DynamicIncentiveIEPOSAgent$UpMessage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/agent/DynamicIncentiveIEPOSAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agent/DynamicIncentiveIEPOSAgent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/agent/Optimization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agent/Optimization.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/agent/logging/IncentiveSignalLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agent/logging/IncentiveSignalLogger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agent/logging/VariableCostLogger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agent/logging/VariableCostLogger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/agent/planselection/PlanSelectionOptimizationFunctionCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/agent/planselection/PlanSelectionOptimizationFunctionCollection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/Vector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/Vector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/experiment/IEPOSExperiment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/func/IndexCostFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/func/IndexCostFunction.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -431,8 +27,8 @@
       <file leaf-file-name="IEPOSExperiment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/experiment/IEPOSExperiment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="138" column="26" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="26" />
+            <state relative-caret-position="577">
+              <caret line="208" selection-start-line="208" selection-end-line="208" />
             </state>
           </provider>
         </entry>
@@ -440,35 +36,40 @@
       <file leaf-file-name="DynamicIncentiveIEPOSAgent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/agent/DynamicIncentiveIEPOSAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="91" column="38" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="38" />
+            <state relative-caret-position="306">
+              <caret line="67" column="76" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Optimization.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/agent/Optimization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="319">
+              <caret line="409" column="53" selection-start-line="409" selection-start-column="53" selection-end-line="409" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IncentiveSignalLogger.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/IncentiveSignalLogger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="epos.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="epos.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/epos.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="20" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+            <state relative-caret-position="350">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncentiveSignalLogger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/IncentiveSignalLogger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -494,11 +95,11 @@
         <option value="$PROJECT_DIR$/src/main/java/agent/planselection/PlanSelectionOptimizationFunctionCollection.java" />
         <option value="$PROJECT_DIR$/src/main/java/agent/logging/VariableCostLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/agent/logging/VisualizerLogger.java" />
-        <option value="$PROJECT_DIR$/conf/epos.properties" />
         <option value="$PROJECT_DIR$/src/main/java/experiment/IEPOSExperiment.java" />
         <option value="$PROJECT_DIR$/src/main/java/agent/DynamicIncentiveIEPOSAgent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/agent/Optimization.java" />
         <option value="$PROJECT_DIR$/src/main/java/agent/logging/IncentiveSignalLogger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/agent/Optimization.java" />
+        <option value="$PROJECT_DIR$/conf/epos.properties" />
       </list>
     </option>
   </component>
@@ -751,12 +352,12 @@
       <updated>1561970376356</updated>
       <workItem from="1561970380182" duration="16705000" />
       <workItem from="1562328666805" duration="8421000" />
-      <workItem from="1562576205688" duration="12019000" />
+      <workItem from="1562576205688" duration="16391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37145000" />
+    <option name="totallyTimeSpent" value="41517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -772,7 +373,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37804878" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37804878" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -983,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/SelectedPlanLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/func/PlanPreferenceFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1043,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/agent/DynamicIncentiveIEPOSAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="91" column="38" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/GlobalCostLogger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-588">
@@ -1057,31 +644,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/agent/Optimization.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/SelectedPlanLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="311">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/GlobalResponseVectorLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/LoggingProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/experiment/IEPOSExperiment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="138" column="26" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/epos.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="20" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+        <state relative-caret-position="577">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/agent/logging/IncentiveSignalLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="232">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/agent/Optimization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="409" column="53" selection-start-line="409" selection-start-column="53" selection-end-line="409" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/agent/DynamicIncentiveIEPOSAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="67" column="76" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/epos.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
         </state>
       </provider>
     </entry>
