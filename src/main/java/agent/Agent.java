@@ -54,6 +54,8 @@ public abstract class Agent<V extends DataType<V>> extends BasePeerlet {
     private int 							numComputed;
     private int 							cumTransmitted;
     private int 							cumComputed;
+
+    double[]                selectedPlanCost;
     
     int										iterationAfterReorganization =	0;	// iteration at which reorganization was requested and executed
 
@@ -116,6 +118,8 @@ public abstract class Agent<V extends DataType<V>> extends BasePeerlet {
     public int getSelectedPlanID() {
     	return this.selectedPlanID;
     }
+
+    public double[] getSelectedPlanCost() { return selectedPlanCost; }
 
     public V getGlobalResponse() {
         return globalResponse;

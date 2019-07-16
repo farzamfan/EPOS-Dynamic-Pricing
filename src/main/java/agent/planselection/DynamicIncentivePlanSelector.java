@@ -65,11 +65,7 @@ public class DynamicIncentivePlanSelector<V extends DataType<V>> implements Plan
         									  currentDiscomfortSumSqr,
         									  agent.getNumAgents(),
         									  agent,
-                                              agent.getPriceWeight(),
-                                              agent.getPreferenceWeight(),
-                                              agent.getQueueWeight(),
                                               agent.getIncentiveRate());
-        
 //        System.out.println("agent: " + agent.getPeer().getIndexNumber() + " Chosen id is: " + id);
         return id;
     }

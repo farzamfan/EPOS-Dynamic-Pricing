@@ -92,11 +92,12 @@ public class Configuration {
 	public static double numberOfWeights = 0;
 	public static String[] weights;
 	public static double lambda = 0;
-//	public double alpha = 0;
-//	public double beta = 0;
 
 	public static int permutationID = 0;
 	public static String permutationFile = null;
+
+	public static int mode;
+	public static int incentiveCycle;
 
 	public static DifferentiableCostFunction<Vector> globalCostFunc = new VarCostFunction();
 	public static PlanCostFunction localCostFunc = new IndexCostFunction();
@@ -130,6 +131,7 @@ public class Configuration {
 	public static final String localCostFilename = "local-cost.csv";
 	public static final String terminationFilename = "termination.csv";
 	public static final String selectedPlanFilename = "selected-plans.csv";
+    public static final String selectedPlanCostFilename = "selected-plans-cost.csv";
 	public static final String numReorganizationsFilename = "num-reorganizations.csv";
 	public static final String globalResponseFilename = "global-response.csv";
 	public static final String fairnessFilename = "fairness-distribution.csv";
@@ -217,6 +219,10 @@ public class Configuration {
 		return Configuration.outputDirectory + Configuration.pathDelimiter + Configuration.selectedPlanFilename;
 	}
 
+    public static String getSelectedPlansCostPath() {
+        return Configuration.outputDirectory + Configuration.pathDelimiter + Configuration.selectedPlanCostFilename;
+    }
+
 	public static String getReorganizationPath() {
 		return Configuration.outputDirectory + Configuration.pathDelimiter + Configuration.numReorganizationsFilename;
 	}
@@ -278,6 +284,8 @@ public class Configuration {
 		sb.append("--------------").append(System.lineSeparator());
 		sb.append("alpha = ").append(this.weights[0]).append(System.lineSeparator());
 		sb.append("beta = ").append(this.weights[1]).append(System.lineSeparator());
+        sb.append("incentive mode = ").append(this.mode).append(System.lineSeparator());
+        sb.append("incentive cycle = ").append(this.incentiveCycle).append(System.lineSeparator());
 		sb.append("incentiveRate (user) = ").append(this.weights[2]).append(System.lineSeparator());
 		sb.append("global cost function = ").append(Configuration.globalCostFunc.toString())
 				.append(System.lineSeparator());
@@ -385,6 +393,8 @@ public class Configuration {
 
 		propertyCleanUp(argMap);
 		setUpEposBasicParams(argMap, config);
+        prepareMode(argMap,null);
+		prepareWeights(argMap,null);
 		prepareDataset(argMap);
 		prepareReorganization(argMap, config);
 		prepareCostFunctions(argMap, config);
@@ -392,6 +402,30 @@ public class Configuration {
 
 		return config;
 	}
+
+    public static Configuration fromFile(String path, String[] args) {
+
+        Configuration config = new Configuration();
+
+        Properties argMap = new Properties();
+        try (InputStream input = new FileInputStream(new File(path))) {
+            argMap.load(input);
+        } catch (IOException e1) {
+            Configuration.log.log(Level.SEVERE, e1.getMessage());
+            throw new IllegalStateException(e1);
+        }
+
+        propertyCleanUp(argMap);
+        setUpEposBasicParams(argMap, config);
+        prepareMode(argMap,args);
+        prepareWeights(argMap,args);
+        prepareDataset(argMap);
+        prepareReorganization(argMap, config);
+        prepareCostFunctions(argMap, config);
+        prepareLoggers(argMap, config);
+
+        return config;
+    }
 
 	public static boolean checkMethodExistence(Class cl, String methodName) {
 		try {
@@ -439,14 +473,47 @@ public class Configuration {
 		String[] possLoggers = { "logger.GlobalCostLogger", "logger.LocalCostMultiObjectiveLogger",
 				"logger.TerminationLogger", "logger.SelectedPlanLogger", "logger.GlobalResponseVectorLogger",
 				"logger.PlanFrequencyLogger", "logger.UnfairnessLogger", "logger.GlobalComplexCostLogger",
-				"logger.WeightsLogger", "logger.ReorganizationLogger", "logger.VisualizerLogger" };
+				"logger.WeightsLogger", "logger.ReorganizationLogger", "logger.VisualizerLogger", "logger.IncentiveVisualizerLogger" };
 
 		Set<String> selectedLoggers = Arrays.stream(possLoggers)
 				.filter(key -> argMap.containsKey(key) && argMap.getProperty(key).equals("true"))
 				.collect(Collectors.toSet());
 
+        System.out.println(selectedLoggers);
 		Configuration.loggers = initializeLoggers(selectedLoggers);
 	}
+
+	public static void prepareWeights(Properties argMap, String[] args){
+
+	    if (args != null){
+            weights = new String[args.length];
+            weights[0] = args[1];
+            weights[1] = args[2];
+            weights[2] = args[3];
+        }
+	    else {
+            weights = new String[Integer.parseInt(argMap.get("numberOfWeights").toString())];
+
+            if (argMap.get("weightsString") != null) {
+                String[] inputWeight = argMap.get("weightsString").toString().split(",");
+                for (int i = 0; i < inputWeight.length; i++) {
+                    weights[i] = inputWeight[i];
+                }
+
+            }
+        }
+    }
+
+    // set up the incentivisation mode
+    public static void prepareMode(Properties argMap, String[] args) {
+        if (args != null) {
+            Configuration.mode = Integer.parseInt(args[4]);
+            Configuration.incentiveCycle = Integer.parseInt(args[5]);
+        } else {
+            Configuration.mode = Helper.clearInt((String) argMap.get("mode"));
+            Configuration.incentiveCycle = Helper.clearInt((String) argMap.get("incentiveCycle"));
+        }
+    }
 
 	public static void prepareDataset(Properties argMap) {
 		if (argMap.get("dataset") != null) {
@@ -455,7 +522,7 @@ public class Configuration {
 			Configuration.selectedDataset = new DatasetDescriptor(dataset, Configuration.planDim,
 					Configuration.numAgents, Configuration.numPlans);
 			Configuration.outputDirectory = System.getProperty("user.dir") + File.separator + "output" + File.separator
-					+ dataset + "_" + argMap.get("weightsString").toString().split(",")[0]+"-"+argMap.get("weightsString").toString().split(",")[1]+"-"+argMap.get("weightsString").toString().split(",")[2];
+					+ dataset + "_" + weights[0]+"-"+weights[1]+"-"+weights[2];
 			// Configuration.outputDirectory = "output";
 
 			Configuration.logDirectory = Configuration.outputDirectory;
@@ -521,16 +588,6 @@ public class Configuration {
 	public static void prepareCostFunctions(Properties argMap, Configuration config) {
 
 		Reflections reflections = new Reflections("func");
-
-		weights = new String[Integer.parseInt(argMap.get("numberOfWeights").toString())];
-
-		if (argMap.get("weightsString") != null) {
-			String[] inputWeight = argMap.get("weightsString").toString().split(",");
-			for (int i = 0;i<inputWeight.length;i++){
-				weights[i] = inputWeight[i];
-			}
-
-		}
 
 		Set<Class<? extends PlanCostFunction>> allClasses = reflections.getSubTypesOf(PlanCostFunction.class);
 
@@ -721,6 +778,7 @@ public class Configuration {
 		WeightsLogger<Vector> WLogger = new WeightsLogger<Vector>(Configuration.getWeightsPath());
 		ReorganizationLogger<Vector> RLogger = new ReorganizationLogger<Vector>(Configuration.getReorganizationPath());
 		VisualizerLogger<Vector> VLogger = new VisualizerLogger<Vector>();
+		IncentiveVisualizerLogger<Vector> IVLogger = new IncentiveVisualizerLogger<>();
 
 		GCLogger.setRun(Configuration.permutationID);
 		LCLogger.setRun(Configuration.permutationID);
@@ -733,10 +791,11 @@ public class Configuration {
 		WLogger.setRun(Configuration.permutationID);
 		RLogger.setRun(Configuration.permutationID);
 		VLogger.setRun(Configuration.permutationID);
+		IVLogger.setRun(Configuration.permutationID);
 
 		Map<String, AgentLogger> result = Arrays
 				.stream(new AgentLogger[] { GCLogger, LCLogger, TLogger, SPLogger, GRVLogger, DstLogger, ULogger,
-						GCXLogger, WLogger, RLogger, VLogger })
+						GCXLogger, WLogger, RLogger, VLogger, IVLogger })
 				.collect(Collectors.toMap(a -> a.getClass().getSimpleName(), a -> a));
 
 		Set<AgentLogger> res = new HashSet<>();

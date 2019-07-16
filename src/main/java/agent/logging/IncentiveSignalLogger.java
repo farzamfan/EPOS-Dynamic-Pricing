@@ -45,18 +45,43 @@ public class IncentiveSignalLogger {
         if (this.filepath == null) {
             System.out.println("no filepath");
         } else {
+            File f = new File(filepath);
             PrintWriter pw;
-            try {
-                pw = new PrintWriter(new File(filepath));
-                StringBuilder output = new StringBuilder();
-                for (List signals: overallIncentiveSignal) {
-                    output.append(createMeanIncentiveSignal(signals));
+
+            if ( f.exists() && !f.isDirectory() ) {
+                try {
+                    pw = new PrintWriter(new FileOutputStream(new File(filepath), true));
+                    StringBuilder output = new StringBuilder();
+
+                    Vector breakString = new Vector(Configuration.numPlans);
+                    for (int i=0;i<breakString.getNumDimensions();i++){
+                        breakString.add(-100.00);
+                    }
+                    output.append(breakString.toString());
                     output.append("\n");
+                    for (List signals : overallIncentiveSignal) {
+                        output.append(createMeanIncentiveSignal(signals));
+                        output.append("\n");
+                    }
+                    pw.write(String.valueOf(output));
+                    pw.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
                 }
-                pw.write(String.valueOf(output));
-                pw.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+            }
+            else {
+                try {
+                    pw = new PrintWriter(f);
+                    StringBuilder output = new StringBuilder();
+                    for (List signals : overallIncentiveSignal) {
+                        output.append(createMeanIncentiveSignal(signals));
+                        output.append("\n");
+                    }
+                    pw.write(String.valueOf(output));
+                    pw.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

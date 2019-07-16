@@ -106,34 +106,26 @@ public class PlanSelectionOptimizationFunctionCollection {
 		return (1 - alpha - beta) * global_cost + alpha * unfairness + beta * local_cost;
 	};
 
-	public static double incentivizedLocalCost(double localcost, double incentiveSignal, double w_m, double w_p, double w_t, double w_i, double pref, double queue)
+	public static double incentivizedLocalCost(double localcost, double incentiveSignal, double w_i)
 	{
-//        System.out.println("LC:"+localcost+" IS:"+incentiveSignal+" pref:"+pref+" w_m,w_t,w_p,w_t,w_i:"+w_m+" "+w_t+" "+w_p+" "+w_i);
-//        System.out.println(localcost - w_i*incentiveSignal*localcost);
-//        System.out.println("--");
-		return (localcost - w_i*incentiveSignal*localcost);
+		return (localcost - w_i*incentiveSignal*localcost + Math.log(localcost));
+//		return (localcost - w_i*incentiveSignal*localcost);
 	}
 
 	public static PlanSelectionOptimizationFunctionScale incentiveFunction = (HashMap<OptimizationFactor, Object> map) -> {
 
 		double[] toReturn = new double[2];
 
-		double alpha			=	(double)	map.get(OptimizationFactor.ALPHA);
-		double beta				=	(double)	map.get(OptimizationFactor.BETA);
-		double w_m              =   (double)    map.get(OptimizationFactor.W_M);
-        double w_p              =   (double)    map.get(OptimizationFactor.W_P);
-        double w_t              =   (double)    map.get(OptimizationFactor.W_T);
-        double w_i              =   (double)    map.get(OptimizationFactor.W_I);
+		double w_i              =   (double)    map.get(OptimizationFactor.W_I);
 		double discomfortSum	=	(double)	map.get(OptimizationFactor.DISCOMFORT_SUM);
 		double discomfortSumSqr =	(double)	map.get(OptimizationFactor.DISCOMFORT_SUM_SQR);
 		double localCost		= 	(double)	map.get(OptimizationFactor.LOCAL_COST);
-		double pref				= 	(double)	map.get(OptimizationFactor.PREFERENCE);
 		double incentiveSignal	=	(double)	map.get(OptimizationFactor.INCENTIVE_SIGNAL);
 		double global_cost		=	(double)	map.get(OptimizationFactor.GLOBAL_COST);
 		double numAgents		=	(double)	map.get(OptimizationFactor.NUM_AGENTS);
 		double queue            =   (double)    map.get(OptimizationFactor.QUEUE);
 
-		double local_cost		=	incentivizedLocalCost(localCost, incentiveSignal, w_m, w_p, w_t, w_i, pref, queue);
+		double local_cost		=	incentivizedLocalCost(localCost, incentiveSignal, w_i);
 		double unfairness		=	unfairness(discomfortSum, discomfortSumSqr, numAgents);
 
 		if(Double.isNaN(unfairness)) {

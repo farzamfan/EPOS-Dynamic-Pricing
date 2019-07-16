@@ -55,9 +55,7 @@ public class IEPOSExperiment {
 			public Peer createPeer(int peerIndex, Experiment e) {
 				Agent newAgent = createAgent.apply(peerIndex);
 				Peer newPeer = new Peer(peerIndex);
-
 				architecture.addPeerlets(newPeer, newAgent, peerIndex, numAgents);
-
 				return newPeer;
 			}
 		};
@@ -85,27 +83,23 @@ public class IEPOSExperiment {
 
 	public static void main(String[] args) {
 		Logger log = Logger.getLogger(IEPOSExperiment.class.getName());
-
 		String confPath = null;
-
 		if (args.length > 0) {
 			Path pathURI = Paths.get(args[0]);
-
 			if (!Files.notExists(pathURI) && Files.isRegularFile(pathURI)) {
 				log.log(Level.INFO, "Configuration file path provided from command line, "
 						+ "overriding default conf location and using file in: \n" + pathURI.toString());
 				confPath = pathURI.toString();
 			}
-
 		}
 
 		String rootPath = System.getProperty("user.dir");
-
-		confPath = confPath == null ? rootPath + File.separator + "conf" + File.separator + "epos.properties"
-				: confPath;
-
-
-		Configuration config = Configuration.fromFile(confPath);
+		confPath = confPath == null ? rootPath + File.separator + "conf" + File.separator + "epos.properties" : confPath;
+        Configuration config;
+        if (args.length > 0) {
+            config = Configuration.fromFile(confPath,args);
+        }
+		else {config = Configuration.fromFile(confPath);}
 		config.printConfiguration();
 
 
@@ -113,27 +107,6 @@ public class IEPOSExperiment {
 
 		for (AgentLogger logger : config.loggers) {
 			loggingProvider.add(logger);
-		}
-
-		List<Double> preference = new ArrayList<Double>() {{
-			add(1.0);
-			add(2.0);
-			add(3.0);
-			add(4.0);
-			add(5.0);
-			add(6.0);
-			add(7.0);
-			add(8.0);
-		}};
-
-		Random r = new Random();
-		double[] priceWeights = new double[926];
-		double[] preferenceWeights = new double[926];
-		double[] queueWeights = new double[926];
-		for (int p=0;p<926;p++){
-			priceWeights[p] = (r.nextGaussian()*2.291173+6.772727)/10;
-			preferenceWeights[p] = (r.nextGaussian()*2.041198+7.204545)/10;
-			queueWeights[p] = (r.nextGaussian()*2.697093+6.568182)/10;
 		}
 
 		VariableCostLogger VCS = new VariableCostLogger(Configuration.outputDirectory+"/variableCost.csv");
@@ -165,42 +138,20 @@ public class IEPOSExperiment {
 				List<Plan<Vector>> possiblePlans = config.getDataset(Configuration.dataset).getPlans(Configuration.mapping.get(agentIdx));
 				AgentLoggingProvider<ModifiableIeposAgent<Vector>> agentLP = loggingProvider.getAgentLoggingProvider(agentIdx, simulationId);
 				ModifiableIeposAgent<Vector> newAgent = new ModifiableIeposAgent<Vector>(config, possiblePlans, agentLP);
-
-				double[] preferenceArray = new double[8];
-				int k =0;
-				Collections.shuffle(preference);
-				for (Double aDouble : preference) {
-					preferenceArray[k] = aDouble;
-					k++;
-				}
-
 				newAgent.setUnfairnessWeight(Double.parseDouble(config.weights[0]));
 				newAgent.setLocalCostWeight(Double.parseDouble(config.weights[1]));
 				newAgent.setIncentiveRate(Double.parseDouble(config.weights[2]));
-
 				newAgent.setVariableCostLogger(VCS);
 				newAgent.setIncentiveSignalLogger(ISL);
-
-				if (config.weights[3].equals("T")){newAgent.setPriceWeight(Double.parseDouble(config.weights[4]));}
-				else {newAgent.setPriceWeight(priceWeights[agentIdx]);}
-
-                if (config.weights[5].equals("T")){newAgent.setPreferenceWeight(Double.parseDouble(config.weights[6]));}
-                else {newAgent.setPreferenceWeight(preferenceWeights[agentIdx]);}
-
-                if (config.weights[7].equals("T")){newAgent.setQueueWeight(Double.parseDouble(config.weights[8]));}
-                else {newAgent.setQueueWeight(queueWeights[agentIdx]);}
-
-				newAgent.setPreference(preferenceArray);
 				newAgent.setPlanSelector(planSelector);
 				return newAgent;
 
 			};
 
 			IEPOSExperiment.runOneSimulation(config, createAgent);
-			// TODO: 03.03.19 only for one simulation
+            VCS.print();
+            ISL.print();
 		}
-		VCS.print();
-		ISL.print();
 		loggingProvider.print();
 
 	}

@@ -12,6 +12,8 @@ import func.PlanCostFunction;
 import agent.logging.AgentLoggingProvider;
 import java.util.ArrayList;
 import java.util.List;
+
+import protopeer.Configuration;
 import protopeer.Finger;
 import data.DataType;
 
@@ -26,6 +28,8 @@ public abstract class TreeAgent<V extends DataType<V>> extends Agent<V> implemen
     // tree properties
     Finger 					parent 			= 	null;
     final List<Finger> 		children 		= 	new ArrayList<>();
+    double[]                prelGainedIncentive;
+    double[]                aggGainedIncentive;
 
     /**
      * Initializes the agent with the given combinatorial optimization problem
@@ -52,6 +56,9 @@ public abstract class TreeAgent<V extends DataType<V>> extends Agent<V> implemen
      */
     public TreeAgent(List<Plan<V>> possiblePlans, CostFunction<V> globalCostFunc, PlanCostFunction<V> localCost, AgentLoggingProvider<? extends TreeAgent<V>> loggingProvider, long seed) {
         super(possiblePlans, globalCostFunc, localCost, loggingProvider, seed);
+        prelGainedIncentive = new double[config.Configuration.numIterations];
+        aggGainedIncentive = new double[config.Configuration.numIterations];
+        selectedPlanCost = new double[config.Configuration.numIterations];
     }
 
     /**
@@ -123,4 +130,12 @@ public abstract class TreeAgent<V extends DataType<V>> extends Agent<V> implemen
     public void reset() {
     	super.reset();
     }
+
+    public double[] getPrelGainedIncentive(){
+        return prelGainedIncentive;
+    }
+    public double[] getAggGainedIncentive(){
+        return aggGainedIncentive;
+    }
+
 }

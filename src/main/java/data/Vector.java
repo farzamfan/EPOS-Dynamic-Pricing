@@ -711,7 +711,7 @@ public class Vector implements DataType<Vector> {
         double max = v.max();
 
         for(int i = 0; i < v.values.length; i++) {
-            normalized.setValue(i, (2*((v.values[i]-min)/(max-min)))-1);
+            normalized.setValue(i, (1.98*((v.values[i]-min)/(max-min)))-1);
         }
         return normalized;
     };

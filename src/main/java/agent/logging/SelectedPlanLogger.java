@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
 import agent.Agent;
+import agent.TreeAgent;
 import config.Configuration;
 import data.DataType;
 import protopeer.measurement.Aggregate;
@@ -30,6 +31,7 @@ public class  SelectedPlanLogger<V extends DataType<V>> extends AgentLogger<Agen
 	
 	private String 				filepath;
 	private int					totalNumAgents;
+	private int[][]             selectedPlansID;
 	
     
     /**
@@ -40,6 +42,7 @@ public class  SelectedPlanLogger<V extends DataType<V>> extends AgentLogger<Agen
     public SelectedPlanLogger(String filename, int totalNumAgents) {
         this.filepath = filename;
         this.totalNumAgents = totalNumAgents;
+        this.selectedPlansID = new int[totalNumAgents][Configuration.numIterations];
     }
 
 	@Override
@@ -47,13 +50,15 @@ public class  SelectedPlanLogger<V extends DataType<V>> extends AgentLogger<Agen
 		
 	}
 
-	@Override
-	public void log(MeasurementLog log, int epoch, Agent<V> agent) {
+    @Override
+    public void log(MeasurementLog log, int epoch, Agent<V> agent) {
 		log.log(epoch, 
 				SelectedPlanLogger.class.getName(), 							// tag1
 				"ID-run" + this.run + "-agent" + agent.getPeer().getIndexNumber(), 	// tag2
 				agent.getIteration(), 											// tag3
-				agent.getSelectedPlanID());										// value
+                agent.getSelectedPlanCost()[agent.getIteration()] // value
+        );
+		selectedPlansID[agent.getPeer().getIndexNumber()][agent.getIteration()] = agent.getSelectedPlanID();
 	}
 
 	@Override
@@ -97,32 +102,31 @@ public class  SelectedPlanLogger<V extends DataType<V>> extends AgentLogger<Agen
 	}
 	
 	private String internalFetchingperRun(MeasurementLog log, int run) {
-		HashMap<Integer, List<Double>> selectedPlans = new HashMap<Integer, List<Double>>();
+		HashMap<Integer, List<Double>> selectedPlansCost = new HashMap<Integer, List<Double>>();
 		
 		for(int i = 0; i < this.totalNumAgents; i++) {
-			selectedPlans.put(i, new ArrayList<Double>());
+            selectedPlansCost.put(i, new ArrayList<Double>());
 		}
-		
-		selectedPlans.keySet().forEach(agentIdx -> {
+
+        selectedPlansCost.keySet().forEach(agentIdx -> {
 			int i = 0;
 			for (; true; i++) {
 	            Aggregate aggregate = log.getAggregate(SelectedPlanLogger.class.getName(), "ID-run" + run + "-agent" + agentIdx, i);
 	            if (aggregate == null || aggregate.getNumValues() < 1) {
 	                break;
 	            }
-	            
-	            selectedPlans.get(agentIdx).add(aggregate.getAverage());
+                selectedPlansCost.get(agentIdx).add(aggregate.getAverage());
 	        }
 			Logger.getLogger(SelectedPlanLogger.class.getName()).log(Level.INFO, 
             		"NODE: " + agentIdx + " Number of samples: " + i);
 		});
 		
-		return this.format(selectedPlans, run);
+		return this.format(selectedPlansCost, run);
 	}
 	
-	private String format(HashMap<Integer, List<Double>> selectedPlans, int run) {
+	private String format(HashMap<Integer, List<Double>> selectedPlansCost, int run) {
 		StringBuilder sb = new StringBuilder();
-		int numIterations = selectedPlans.get(0).size();
+		int numIterations = selectedPlansCost.get(0).size();
 		
 		for(int iteration = 0; iteration < numIterations; iteration++) {
 			sb.append(run)
@@ -130,8 +134,11 @@ public class  SelectedPlanLogger<V extends DataType<V>> extends AgentLogger<Agen
 			  .append(iteration);
 			
 			for(int agentIdx = 0; agentIdx < this.totalNumAgents; agentIdx++) {
-				sb.append(",").append(selectedPlans.get(agentIdx).get(iteration).intValue());
+				sb.append(",").append(selectedPlansCost.get(agentIdx).get(iteration).doubleValue());
 			}
+            for(int agentIdx = 0; agentIdx < this.totalNumAgents; agentIdx++) {
+                sb.append(",").append(selectedPlansID[agentIdx][iteration]);
+            }
 			sb.append(System.lineSeparator());
 		}
 		

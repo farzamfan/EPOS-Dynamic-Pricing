@@ -54,11 +54,7 @@ import func.PlanCostFunction;
     double 												lambda;
     double												alpha;
     double 												beta;
-    double 												w_m;
-    double 												w_p;
-    double 												w_t;
     double 												w_i;
-    double[]                                            preference;
     double												gamma;
     double												delta;
     PlanSelector<DynamicIncentiveIEPOSAgent<V>, V> 		planSelector;
@@ -66,8 +62,8 @@ import func.PlanCostFunction;
     VariableCostLogger                                  variableCostLogger;
     List<Vector>                                        complexCosts;
     int[]                                               complexCostSelceted;
-    
-    private boolean										convergenceReached				=	false;
+
+    boolean										convergenceReached;
 
     /**
      * Creates a new IeposAgent. Using the same RNG seed will result in the same
@@ -92,9 +88,6 @@ import func.PlanCostFunction;
         this.lambda = 0;
         this.alpha = 0;
         this.beta = 0;
-        this.w_m=0;
-        this.w_p=0;
-        this.w_t=0;
         this.planSelector = new DynamicIncentivePlanSelector<>();
         this.complexCosts = new ArrayList<>(numIterations);
         this.complexCostSelceted = new int[numIterations];
@@ -110,23 +103,9 @@ import func.PlanCostFunction;
     	this.gamma = alpha;
     }
 
-    public void setPriceWeight(double w_m) {
-        this.w_m = w_m;
-    }
-
-    public void setPreferenceWeight(double w_p) {
-        this.w_p = w_p;
-    }
-
-    public void setQueueWeight(double w_t) {
-        this.w_t = w_t;
-    }
-
     public void setIncentiveRate(double w_i) {
         this.w_i = w_i;
     }
-
-    public void setPreference (double[] pref) {this.preference = pref;}
 
     public void setVariableCostLogger(VariableCostLogger VCS){this.variableCostLogger = VCS;}
     public void setIncentiveSignalLogger(IncentiveSignalLogger ISL){ this.incentiveSignalLogger = ISL;}
@@ -139,23 +118,9 @@ import func.PlanCostFunction;
     	return this.alpha;
     }
 
-    public double getPriceWeight() {
-        return this.w_m;
-    }
-
-    public double getPreferenceWeight() {
-        return this.w_p;
-    }
-
-    public double getQueueWeight() {
-        return this.w_t;
-    }
-
     public double getIncentiveRate() {
         return this.w_i;
     }
-
-    public double[] getPreference() { return this.preference;}
 
     public Vector getComplexCosts(int iter) {
         return complexCosts.get(iter);
@@ -316,7 +281,7 @@ import func.PlanCostFunction;
             this.aggregatedDiscomfortSum = 0;
             this.aggregatedDiscomfortSumSqr = 0;
             
-            this.convergenceReached = false;
+//            this.convergenceReached = false;
             
             this.log(Level.FINER, "initIteration:");
             if(this.isLeaf()) {
@@ -582,11 +547,15 @@ import func.PlanCostFunction;
     private void setConvergenceReachedFlag(V oldGlobalResponse, V newGlobalResponse) {
     	double oldglobalcost = this.getGlobalCostFunction().calcCost(oldGlobalResponse);
     	double newglobalcost = this.getGlobalCostFunction().calcCost(newGlobalResponse);
-    	this.convergenceReached = oldglobalcost == newglobalcost;
+    	hasConverged(oldglobalcost,newglobalcost);
     }
     
-    public boolean hasConverged() {
-    	return this.convergenceReached;
+    public void hasConverged(double oldglobalcost, double newglobalcost) {
+        this.convergenceReached = oldglobalcost == newglobalcost;
+    }
+
+    public boolean isConvergenceReached() {
+        return convergenceReached;
     }
     
     private void updateGlobalDiscomfortScores(DownMessage parentMsg) {
@@ -619,10 +588,12 @@ import func.PlanCostFunction;
             
             this.subtreeDiscomfortSum.addAll(this.prevSubtreeDiscomfortSum);
             this.subtreeDiscomfortSumSqr.addAll(this.prevSubtreeDiscomfortSumSqr);
-            
+            aggGainedIncentive[iteration] = aggGainedIncentive[iteration-1];
+
             Collections.fill(approvals, false);
             
             this.log(Level.FINER, "NOT ACCEPTED.");
+
         } else {
         	
         }

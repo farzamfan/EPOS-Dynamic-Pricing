@@ -30,7 +30,6 @@ import org.checkerframework.checker.units.qual.K;
 public class Optimization {
 
     protected Random random;
-    public Vector variableCosts;
     public double localCost=0;
     public double preference=0;
     public double queue=0;
@@ -39,7 +38,6 @@ public class Optimization {
 
     public Optimization(Random random) {
         this.random = random;
-        variableCosts = new Vector(Configuration.numPlans);
         incentiveSignals = new ArrayList<>(Configuration.numIterations);
     }
 
@@ -249,12 +247,12 @@ public class Optimization {
      * @return
      */
     public <V extends DataType<V>> int argmin(
-    		CostFunction<V> costFunction,		PlanCostFunction<V> localCostFunction,
-			List<Plan<V>> choices, 				V constant, 
-			double alpha,						double beta,
-			double discomfortSumConstant,		double discomfortSumSqrConstant,	
-			int numAgents, 						DynamicIncentiveIEPOSAgent agent,
-            double w_m,     double w_p,         double w_t,     double w_i)
+            CostFunction<V> costFunction, PlanCostFunction<V> localCostFunction,
+            List<Plan<V>> choices, V constant,
+            double alpha, double beta,
+            double discomfortSumConstant, double discomfortSumSqrConstant,
+            int numAgents, DynamicIncentiveIEPOSAgent agent,
+            double w_i)
     {
 
 		double[] costs = new double[choices.size()];
@@ -280,7 +278,7 @@ public class Optimization {
 		});
 		Vector LIS = calcLocalIncentiveVector(choices,constant,costFunction);
 
-		return this.extendedOptimization(costs, choices, localCostFunction, constant, alpha, beta, discomfortSums, discomfortSumSqrs, numAgents, w_m, w_p, w_t, w_i, agent.preference, agent, LIS);
+		return this.extendedOptimization(costs, choices, localCostFunction, constant, alpha, beta, discomfortSums, discomfortSumSqrs, numAgents, w_i, agent, LIS);
 
     }
 
@@ -358,17 +356,25 @@ public class Optimization {
                                                              V prelAgg,
                                                              double alpha,                  double beta,
                                                              double[] discomfortSums,       double[] discomfortSumSqrs,
-                                                             double numAgents,              double w_m,     double w_p,
-                                                             double w_t,     double w_i,     double[] pref,
+                                                             double numAgents, double w_i,
                                                              DynamicIncentiveIEPOSAgent agent, Vector LIS) {
 
-			double minCost = Double.POSITIVE_INFINITY;
-			int selected = -1;
-			int numOpt = 0;
-			Vector goalSignal = Configuration.goalSignalSupplier.get();
+            Vector variableCosts = new Vector(Configuration.numPlans);
             Vector G = new Vector(costs.length);
             Vector L = new Vector(costs.length);
             Vector complexCost = new Vector(costs.length);
+
+            if (Configuration.mode == 1){
+                if (agent.iteration % Configuration.incentiveCycle != 0){
+                    w_i =0;
+                }
+            }
+            else if (Configuration.mode == 2){
+                if (!agent.isConvergenceReached()){
+                    w_i=0;
+                }
+//                else {System.out.println("triggered"+" "+agent.getPeer().getIndexNumber()+" "+agent.getIteration());}
+            }
 
 			try {
 				for(int i = 0; i < costs.length; i++) {
@@ -376,9 +382,6 @@ public class Optimization {
                     int index = 0;
                     //if you care about local cost
                     if (alpha > 0 || beta > 0) {
-
-                        queue = Math.max((goalSignal.getValue(index) - ((Vector) prelAgg).getValue(index)) / Math.max(Math.max(goalSignal.getValue(index), ((Vector) prelAgg).getValue(index)), 0.01), 0);
-                        preference = 1 / (pref[Arrays.asList(ArrayUtils.toObject(pref)).indexOf(Double.valueOf((index / 36) + 1))]);
 
                         localCost = localCostFunction.calcCost(localPlans.get(i));
 
@@ -390,9 +393,6 @@ public class Optimization {
                         parameters.put(OptimizationFactor.INCENTIVE_SIGNAL, LIS.getValue(i));
                         parameters.put(OptimizationFactor.ALPHA, alpha);
                         parameters.put(OptimizationFactor.BETA, beta);
-                        parameters.put(OptimizationFactor.W_M, w_m);
-                        parameters.put(OptimizationFactor.W_P, w_p);
-                        parameters.put(OptimizationFactor.W_T, w_t);
                         parameters.put(OptimizationFactor.W_I, w_i);
                         parameters.put(OptimizationFactor.PREFERENCE, preference);
                         parameters.put(OptimizationFactor.NUM_AGENTS, numAgents);
@@ -400,8 +400,9 @@ public class Optimization {
                         // TODO: 03.03.19 scalarize Unfairness
                         G.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[0]);
                         L.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[1]);
+                        variableCosts.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[1]);
                     }
-                    variableCosts = L;
+                    else {variableCosts.setValue(i,localCostFunction.calcCost(localPlans.get(i)));}
                 }
 			} catch(Exception e) {
 				e.printStackTrace();
@@ -417,8 +418,10 @@ public class Optimization {
 
             agent.variableCostLogger.setVariableCost(agent.getPeer().getIndexNumber(), agent.iteration, variableCosts);
             agent.incentiveSignalLogger.setOverallIncentiveSignal(agent.getPeer().getIndexNumber(), agent.iteration, LIS);
-
+            agent.prelGainedIncentive[agent.iteration] = LIS.getValue(complexCost.find(complexCost.min()));
+            agent.aggGainedIncentive[agent.iteration] = LIS.getValue(complexCost.find(complexCost.min()));
 			agent.setComplexCosts(complexCost,agent.iteration,complexCost.find(complexCost.min()));
+			agent.selectedPlanCost[agent.iteration] = variableCosts.getValue(complexCost.find(complexCost.min()));
 			return complexCost.find(complexCost.min());
 
 	}
