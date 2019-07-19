@@ -29,7 +29,7 @@ public abstract class TreeAgent<V extends DataType<V>> extends Agent<V> implemen
     Finger 					parent 			= 	null;
     final List<Finger> 		children 		= 	new ArrayList<>();
     double[]                prelGainedIncentive;
-    double[]                aggGainedIncentive;
+    double[]                aggGainedIncentive = null;
 
     /**
      * Initializes the agent with the given combinatorial optimization problem
@@ -58,7 +58,6 @@ public abstract class TreeAgent<V extends DataType<V>> extends Agent<V> implemen
         super(possiblePlans, globalCostFunc, localCost, loggingProvider, seed);
         prelGainedIncentive = new double[config.Configuration.numIterations];
         aggGainedIncentive = new double[config.Configuration.numIterations];
-        selectedPlanCost = new double[config.Configuration.numIterations];
     }
 
     /**

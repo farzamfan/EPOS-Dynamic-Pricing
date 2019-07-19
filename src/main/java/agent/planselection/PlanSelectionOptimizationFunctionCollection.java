@@ -109,7 +109,6 @@ public class PlanSelectionOptimizationFunctionCollection {
 	public static double incentivizedLocalCost(double localcost, double incentiveSignal, double w_i)
 	{
 		return (localcost - w_i*incentiveSignal*localcost + Math.log(localcost));
-//		return (localcost - w_i*incentiveSignal*localcost);
 	}
 
 	public static PlanSelectionOptimizationFunctionScale incentiveFunction = (HashMap<OptimizationFactor, Object> map) -> {

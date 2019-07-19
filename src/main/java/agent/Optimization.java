@@ -296,7 +296,9 @@ public class Optimization {
             localIncentiveSignal[i] = 1-costFunction.calcCost(combined.getValue());
         });
         Vector LIS = new Vector(localIncentiveSignal);
+        // use extended to have enable penalty pricing (dishes would cost more)
         LIS = LIS.min_max_normalization_extended(LIS);
+//        LIS = LIS.min_max_normalization.apply(LIS);
         return LIS;
     }
 
@@ -376,14 +378,24 @@ public class Optimization {
 //                else {System.out.println("triggered"+" "+agent.getPeer().getIndexNumber()+" "+agent.getIteration());}
             }
 
+            //normalising the local plan costs
+//            Vector lCosts = new Vector(Configuration.numPlans);
+//            for (int y=0;y<lCosts.getNumDimensions();y++){
+//                lCosts.setValue(y,localCostFunction.calcCost(localPlans.get(y)));
+//            }
+//            lCosts = lCosts.min_max_normalization_G.apply(lCosts);
+
+
 			try {
 				for(int i = 0; i < costs.length; i++) {
 				    complexCost.setValue(i,costs[i]);
-                    int index = 0;
                     //if you care about local cost
+                    variableCosts.setValue(i,localCostFunction.calcCost(localPlans.get(i)));
                     if (alpha > 0 || beta > 0) {
 
+//                        if the local costs are normalised, comment out the below line
                         localCost = localCostFunction.calcCost(localPlans.get(i));
+//                        localCost = lCosts.getValue(i);
 
                         HashMap<OptimizationFactor, Object> parameters = new HashMap<OptimizationFactor, Object>();
                         parameters.put(OptimizationFactor.GLOBAL_COST, costs[i]);
@@ -400,9 +412,8 @@ public class Optimization {
                         // TODO: 03.03.19 scalarize Unfairness
                         G.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[0]);
                         L.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[1]);
-                        variableCosts.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[1]);
+                        variableCosts.setValue(i,Configuration.planOptimizationFunction.apply(parameters)[1]-Math.log(localCost));
                     }
-                    else {variableCosts.setValue(i,localCostFunction.calcCost(localPlans.get(i)));}
                 }
 			} catch(Exception e) {
 				e.printStackTrace();
@@ -415,14 +426,16 @@ public class Optimization {
                 }
 			}
             else {complexCost = complexCost.min_max_normalization.apply(complexCost);}
-
             agent.variableCostLogger.setVariableCost(agent.getPeer().getIndexNumber(), agent.iteration, variableCosts);
             agent.incentiveSignalLogger.setOverallIncentiveSignal(agent.getPeer().getIndexNumber(), agent.iteration, LIS);
             agent.prelGainedIncentive[agent.iteration] = LIS.getValue(complexCost.find(complexCost.min()));
             agent.aggGainedIncentive[agent.iteration] = LIS.getValue(complexCost.find(complexCost.min()));
 			agent.setComplexCosts(complexCost,agent.iteration,complexCost.find(complexCost.min()));
+
 			agent.selectedPlanCost[agent.iteration] = variableCosts.getValue(complexCost.find(complexCost.min()));
-			return complexCost.find(complexCost.min());
+
+            return complexCost.find(complexCost.min());
+
 
 	}
     

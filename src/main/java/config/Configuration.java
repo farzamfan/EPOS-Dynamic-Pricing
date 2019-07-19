@@ -130,7 +130,7 @@ public class Configuration {
 	public static final String globalCostFilename = "global-cost.csv";
 	public static final String localCostFilename = "local-cost.csv";
 	public static final String terminationFilename = "termination.csv";
-	public static final String selectedPlanFilename = "selected-plans.csv";
+	public static final String selectedPlanFilename = "selected-plans-cost.csv";
     public static final String selectedPlanCostFilename = "selected-plans-cost.csv";
 	public static final String numReorganizationsFilename = "num-reorganizations.csv";
 	public static final String globalResponseFilename = "global-response.csv";
@@ -142,7 +142,7 @@ public class Configuration {
 	public static final String repetetiveFairnessFilename = "repetetive-fairness.csv";
 	public static final String initialStructureSuffix = "-all-permutations-";
 	public static final String globalComplexCostFilename = "global-complex-cost.csv";
-	public static final String globalWeightsFilename = "weights-alpha-beta.csv";
+	public static final String globalWeightsFilename = "selected-plans-ID.csv";
 	public static String initialSortingOrder = "ASC";
 	public static String goalSignalFilename = "TIS-GENERATION-FAILURE.txt";
 
@@ -775,7 +775,7 @@ public class Configuration {
 		UnfairnessLogger<Vector> ULogger = new UnfairnessLogger<Vector>(Configuration.getUnfairnessPath());
 		GlobalComplexCostLogger<Vector> GCXLogger = new GlobalComplexCostLogger<Vector>(
 				Configuration.getGlobalComplexCostPath());
-		WeightsLogger<Vector> WLogger = new WeightsLogger<Vector>(Configuration.getWeightsPath());
+		WeightsLogger<Vector> WLogger = new WeightsLogger<Vector>(Configuration.getWeightsPath(),Configuration.numAgents);
 		ReorganizationLogger<Vector> RLogger = new ReorganizationLogger<Vector>(Configuration.getReorganizationPath());
 		VisualizerLogger<Vector> VLogger = new VisualizerLogger<Vector>();
 		IncentiveVisualizerLogger<Vector> IVLogger = new IncentiveVisualizerLogger<>();

@@ -63,7 +63,7 @@ import func.PlanCostFunction;
     List<Vector>                                        complexCosts;
     int[]                                               complexCostSelceted;
 
-    boolean										convergenceReached;
+    boolean										        convergenceReached;
 
     /**
      * Creates a new IeposAgent. Using the same RNG seed will result in the same
@@ -91,6 +91,7 @@ import func.PlanCostFunction;
         this.planSelector = new DynamicIncentivePlanSelector<>();
         this.complexCosts = new ArrayList<>(numIterations);
         this.complexCostSelceted = new int[numIterations];
+        selectedPlanCost = new double[config.Configuration.numIterations];
     }
     
     public void setLocalCostWeight(double beta) {
@@ -577,6 +578,7 @@ import func.PlanCostFunction;
         if (!parentMsg.approved) {
             this.selectedPlan = this.prevSelectedPlan;
             this.selectedPlanID = this.prevSelectedPlanID;
+            this.selectedPlanCost[iteration] = this.selectedPlanCost[iteration-1];
             this.aggregatedResponse.set(this.prevAggregatedResponse);
             this.subtreeResponses.clear();
             this.subtreeResponses.addAll(this.prevSubtreeResponses);

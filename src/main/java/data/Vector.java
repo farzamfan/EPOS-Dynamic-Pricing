@@ -681,16 +681,14 @@ public class Vector implements DataType<Vector> {
      * As a result all values are in range [0,1]
      * @return normalized vector
      */
+
+    // between 1 and 2
     public static UnaryOperator<Vector> min_max_normalization_G = (Vector v) -> {
         Vector normalized = new Vector(v.getNumDimensions());
-        Vector theoreticalMax = new Vector(v.getNumDimensions());
-        for (int i=0;i<v.getNumDimensions()-1;i++){
-            theoreticalMax.setValue(i,0.0);
-        }
-        theoreticalMax.setValue(v.getNumDimensions()-1,Configuration.numAgents);
-        double max = theoreticalMax.variance();
+        double min = v.min();
+        double max = v.max();
         for(int i = 0; i < v.values.length; i++) {
-            normalized.setValue(i, (v.values[i])/(max));
+            normalized.setValue(i, ((v.values[i]-min)/(max-min))+1);
         }
         return normalized;
     };
@@ -705,6 +703,7 @@ public class Vector implements DataType<Vector> {
         return normalized;
     };
 
+    // between -1 and 1
     public static Vector min_max_normalization_extended (Vector v) {
         Vector normalized = new Vector(v.getNumDimensions());
         double min = v.min();

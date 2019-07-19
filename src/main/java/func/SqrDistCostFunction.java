@@ -48,7 +48,8 @@ public class SqrDistCostFunction implements DifferentiableCostFunction<Vector>, 
     public double calcCost(Vector vector) {
         Vector v = vector.cloneThis();
         v.subtract(target);
-        v.pow(2);
+//        v.pow(2);
+        v.pow(1);
         return v.sum();
     }
 
