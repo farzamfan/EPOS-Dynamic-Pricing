@@ -805,5 +805,5 @@ j <- 1
 #write.table(isSum,sep = ",","/Users/farzamf/Desktop/samplePlot/RSS/IS-RSS.csv",row.names = FALSE,col.names = FALSE)
 #write.table(isSum,sep = ",","/Users/farzamf/Desktop/samplePlot/RMSE/IS-RMSE.csv",row.names = FALSE,col.names = FALSE)
 #write.table(isSum,sep = ",","/Users/farzamf/Desktop/samplePlot/Euclidean/IS-Euclidean.csv",row.names = FALSE,col.names = FALSE)
-write.table(isSum,sep = ",","/Users/farzamf/Desktop/samplePlot/RMSE-/IS-RMSE.csv",row.names = FALSE,col.names = FALSE)
+write.table(isSum,sep = ",","/Users/farzamf/Desktop/samplePlot/RMSE-withPenalty/IS-RMSE.csv",row.names = FALSE,col.names = FALSE)
 

@@ -109,9 +109,9 @@ public class SelectedPlanLogger<V extends DataType<V>> extends AgentLogger<Agent
 				Aggregate aggregate = log.getAggregate(SelectedPlanLogger.class.getName(), "ID-run" + run + "-agent" + agentIdx, i);
 				if (aggregate == null || aggregate.getNumValues() < 1) {
 					break;
-				}
-
-				selectedPlans.get(agentIdx).add(aggregate.getAverage());
+                }
+//				selectedPlans.get(agentIdx).add(aggregate.getAverage());
+                selectedPlans.get(agentIdx).add(aggregate.getMax());
 			}
 			Logger.getLogger(SelectedPlanLogger.class.getName()).log(Level.INFO,
 					"NODE: " + agentIdx + " Number of samples: " + i);

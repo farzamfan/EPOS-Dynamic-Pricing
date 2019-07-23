@@ -42,15 +42,11 @@ import data.Vector;
 import dsutil.generic.RankPriority;
 import dsutil.protopeer.services.topology.trees.DescriptorType;
 import dsutil.protopeer.services.topology.trees.TreeType;
-import func.CrossCorrelationCostFunction;
 import func.DifferentiableCostFunction;
 import func.HasGoal;
 import func.IndexCostFunction;
 import func.PlanCostFunction;
 import func.PlanDiscomfortFunction;
-import func.PlanPreferenceFunction;
-import func.RMSECostFunction;
-import func.RSSCostFunction;
 import func.VarCostFunction;
 import javassist.Modifier;
 import tree.BalanceType;
@@ -473,7 +469,7 @@ public class Configuration {
 		String[] possLoggers = { "logger.GlobalCostLogger", "logger.LocalCostMultiObjectiveLogger",
 				"logger.TerminationLogger", "logger.SelectedPlanLogger", "logger.GlobalResponseVectorLogger",
 				"logger.PlanFrequencyLogger", "logger.UnfairnessLogger", "logger.GlobalComplexCostLogger",
-				"logger.WeightsLogger", "logger.ReorganizationLogger", "logger.VisualizerLogger", "logger.IncentiveVisualizerLogger" };
+				"logger.SelectedPlanIDLogger", "logger.ReorganizationLogger", "logger.VisualizerLogger", "logger.IncentiveVisualizerLogger" };
 
 		Set<String> selectedLoggers = Arrays.stream(possLoggers)
 				.filter(key -> argMap.containsKey(key) && argMap.getProperty(key).equals("true"))
@@ -775,7 +771,7 @@ public class Configuration {
 		UnfairnessLogger<Vector> ULogger = new UnfairnessLogger<Vector>(Configuration.getUnfairnessPath());
 		GlobalComplexCostLogger<Vector> GCXLogger = new GlobalComplexCostLogger<Vector>(
 				Configuration.getGlobalComplexCostPath());
-		WeightsLogger<Vector> WLogger = new WeightsLogger<Vector>(Configuration.getWeightsPath(),Configuration.numAgents);
+		SelectedPlanIDLogger<Vector> WLogger = new SelectedPlanIDLogger<Vector>(Configuration.getWeightsPath(),Configuration.numAgents);
 		ReorganizationLogger<Vector> RLogger = new ReorganizationLogger<Vector>(Configuration.getReorganizationPath());
 		VisualizerLogger<Vector> VLogger = new VisualizerLogger<Vector>();
 		IncentiveVisualizerLogger<Vector> IVLogger = new IncentiveVisualizerLogger<>();

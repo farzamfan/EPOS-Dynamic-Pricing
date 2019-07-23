@@ -6,6 +6,7 @@
 package func;
 
 import data.DataType;
+import data.Vector;
 
 /**
  * A cost function that assigns a cost value to any given data instance. Furthermore,
@@ -16,8 +17,10 @@ import data.DataType;
  * @param <V> the type of the data this cost function should handle. Preferably a numerical structure like a vector
  */
 public interface DifferentiableCostFunction<V extends DataType<V>> extends CostFunction<V> {
-	
-	/**
+
+    double calcCost(Vector plan, Vector cost);
+
+    /**
 	 * This method returns the gradient of the cost function
 	 * in regards to the input value. For numerical inputs, the
 	 * gradient is a numeric structure, e.g. a vector, the it returns a vector

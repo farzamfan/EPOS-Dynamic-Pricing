@@ -84,15 +84,13 @@ public class LocalCostMultiObjectiveLogger<V extends DataType<V>> extends AgentL
     @Override
     public void log(MeasurementLog log, int epoch, Agent<V> agent) {
     	DynamicIncentiveIEPOSAgent moieposagent = (DynamicIncentiveIEPOSAgent) agent;
-//    	if (moieposagent.isRoot()) {
     		double discomfortSum = moieposagent.getGlobalDiscomfortSum();
     		int numAgents = moieposagent.getNumAgents();
-            double cost = PlanSelectionOptimizationFunctionCollection.localCost(discomfortSum, numAgents);
-//            double cost = agent.getSelectedPlanCost()[agent.getIteration()];
-            Token token = new Token(cost, agent.getIteration(), this.run);            
-            log.log(epoch, LocalCostMultiObjectiveLogger.class.getName(), token, 1.0);            
+//            double cost = PlanSelectionOptimizationFunctionCollection.localCost(discomfortSum, numAgents);
+            double cost = agent.getSelectedPlanCost();
+            Token token = new Token(cost, agent.getIteration(), this.run);
+            log.log(epoch, LocalCostMultiObjectiveLogger.class.getName(), token, 1.0);
             log.log(epoch, LocalCostMultiObjectiveLogger.class.getName() + "raw", agent.getIteration(), cost);
-//        }
     }
 
     @Override

@@ -706,19 +706,25 @@ public class Vector implements DataType<Vector> {
     // between -1 and 1
     public static Vector min_max_normalization_extended (Vector v) {
         Vector normalized = new Vector(v.getNumDimensions());
-        double min = v.min();
+//        double min = v.min();
+        double min = 0.0;
         double max = v.max();
 
         for(int i = 0; i < v.values.length; i++) {
-            normalized.setValue(i, (1.98*((v.values[i]-min)/(max-min)))-1);
+            normalized.setValue(i, (1.99*((v.values[i]-min)/(max-min)))-1);
+//            proportional incentives (this one is useless)
+//            normalized.setValue(i, (1.99*((v.values[i]-min)/(max-min)))-(1 + (1/Math.pow(Math.abs(v.values[i]),5))));
         }
         return normalized;
     };
 
     public static UnaryOperator<Vector> sigmoid_normalisation = (Vector v) -> {
         Vector normalized = new Vector(v.getNumDimensions());
+        v = v.min_max_normalization.apply(v);
         for(int i = 0; i < v.values.length; i++) {
-            normalized.setValue(i, 2*1/(1 + Math.pow(Math.E,(-1.5*v.getValue(i))))-1 );
+//            normalized.setValue(i, 2*1/(1 + Math.pow(Math.E,(-1.5*v.getValue(i))))-1 );
+            double val = (5*v.getValue(i));
+            normalized.setValue(i, 1.99* (2*((1/(1 + Math.pow(Math.E,(-1*val))))-0.5)) -1 );
         }
         return normalized;
     };

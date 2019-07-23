@@ -269,7 +269,7 @@ public class Optimization {
 			}
 			double cost = costFunction.calcCost(combined.getValue());
 
-            //choices are the local plans
+//            choices are the local plans
             // costs is the global cost of (combined aggregates + the selected plan)
 			costs[i] = cost;
 			double score = localCostFunction.calcCost(choices.get(i));
@@ -277,28 +277,30 @@ public class Optimization {
 			discomfortSumSqrs[i] = discomfortSumSqrConstant + score*score;
 		});
 		Vector LIS = calcLocalIncentiveVector(choices,constant,costFunction);
-
 		return this.extendedOptimization(costs, choices, localCostFunction, constant, alpha, beta, discomfortSums, discomfortSumSqrs, numAgents, w_i, agent, LIS);
 
     }
 
     public <V extends DataType<V>> Vector calcLocalIncentiveVector(List<Plan<V>> choices, V constant, CostFunction<V> costFunction){
         double[] localIncentiveSignal = new double[choices.size()];
-//        Vector target = Configuration.goalSignalSupplier.get();
         IntStream.range(0, choices.size()).forEach(i -> {
             V combined;
+//            choices are the local plans
             if(constant != null) {
                 combined = constant.cloneThis();
                 combined.add(choices.get(i).getValue());
             } else {
                 combined = choices.get(i).getValue();
             }
-            localIncentiveSignal[i] = 1-costFunction.calcCost(combined.getValue());
+//            costFunction is the global cost function
+//            localIncentiveSignal[i] = 1-costFunction.calcCost(combined.getValue());
+            localIncentiveSignal[i] = -costFunction.calcCost(combined.getValue());
         });
         Vector LIS = new Vector(localIncentiveSignal);
         // use extended to have enable penalty pricing (dishes would cost more)
-        LIS = LIS.min_max_normalization_extended(LIS);
+//        LIS = LIS.min_max_normalization_extended(LIS);
 //        LIS = LIS.min_max_normalization.apply(LIS);
+        LIS = LIS.sigmoid_normalisation.apply(LIS);
         return LIS;
     }
 

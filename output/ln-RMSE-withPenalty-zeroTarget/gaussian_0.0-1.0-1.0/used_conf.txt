@@ -1,0 +1,32 @@
+CONFIGURATION:
+dataset = gaussian
+output = /Users/farzamf/Desktop/DI-IEPOS/output/gaussian_0.0-1.0-1.0
+==============
+numSimulations = 10
+dataset = gaussian
+numAgents = 100
+numPlans = 16
+planDim = 100
+numIterations = 40
+numChildren = 2
+--------------
+alpha = 0.0
+beta = 1.0
+incentive mode = 0
+incentive cycle = 0
+incentiveRate (user) = 1.0
+global cost function = func.RMSECostFunction@69d9c55
+local cost function = index
+goal signal = 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+--------------
+permutationID = 0
+reorganizationSeed = 0
+permutationSeed = 0
+permutationFile = null
+reorganizationPeriod = 3
+memorizationOffset = 5
+reorganizationStrategy = NEVER
+convergenceTolerance = 0.5
+--------------
+loggingLevel = SEVERE
+Selected Loggers: LocalCostMultiObjectiveLogger, GlobalCostLogger, PlanFrequencyLogger, GlobalComplexCostLogger, GlobalResponseVectorLogger, SelectedPlanIDLogger, TerminationLogger, UnfairnessLogger, VisualizerLogger, ReorganizationLogger, SelectedPlanLogger, IncentiveVisualizerLogger
